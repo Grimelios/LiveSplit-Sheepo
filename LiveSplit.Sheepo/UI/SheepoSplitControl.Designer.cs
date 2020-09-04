@@ -32,6 +32,7 @@
 			this.deleteButton = new System.Windows.Forms.Button();
 			this.upButton = new System.Windows.Forms.Button();
 			this.downButton = new System.Windows.Forms.Button();
+			this.detailsPanel = new System.Windows.Forms.Panel();
 			this.SuspendLayout();
 			// 
 			// splitTypeDropdown
@@ -40,11 +41,14 @@
 			this.splitTypeDropdown.Items.AddRange(new object[] {
             "Egg",
             "End",
+            "Feather",
+            "Manual",
             "Start"});
 			this.splitTypeDropdown.Location = new System.Drawing.Point(4, 4);
 			this.splitTypeDropdown.Name = "splitTypeDropdown";
 			this.splitTypeDropdown.Size = new System.Drawing.Size(121, 21);
 			this.splitTypeDropdown.TabIndex = 0;
+			this.splitTypeDropdown.SelectedIndexChanged += new System.EventHandler(this.splitTypeDropdown_SelectedIndexChanged);
 			// 
 			// deleteButton
 			// 
@@ -79,10 +83,18 @@
 			this.downButton.UseVisualStyleBackColor = true;
 			this.downButton.Click += new System.EventHandler(this.downButton_Click);
 			// 
+			// detailsPanel
+			// 
+			this.detailsPanel.Location = new System.Drawing.Point(132, 3);
+			this.detailsPanel.Name = "detailsPanel";
+			this.detailsPanel.Size = new System.Drawing.Size(234, 21);
+			this.detailsPanel.TabIndex = 4;
+			// 
 			// SheepoSplitControl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.detailsPanel);
 			this.Controls.Add(this.downButton);
 			this.Controls.Add(this.upButton);
 			this.Controls.Add(this.deleteButton);
@@ -99,5 +111,6 @@
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button upButton;
         private System.Windows.Forms.Button downButton;
+        private System.Windows.Forms.Panel detailsPanel;
     }
 }

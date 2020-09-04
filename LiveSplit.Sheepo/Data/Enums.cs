@@ -4,13 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LiveSplit.Sheepo
+namespace LiveSplit.Sheepo.Data
 {
+	public enum Eggs
+	{
+	}
+
 	public enum SplitTypes
 	{
 		Egg,
 		End,
+		Feather,
 		Manual,
-		Start
+		Start,
+		Unassigned = -1
 	}
 }

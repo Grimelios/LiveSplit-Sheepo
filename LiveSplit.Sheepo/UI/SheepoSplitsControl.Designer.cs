@@ -32,7 +32,8 @@
 			this.clearButton = new System.Windows.Forms.Button();
 			this.splitCountLabel = new System.Windows.Forms.Label();
 			this.splitsPanel = new System.Windows.Forms.Panel();
-			this.splitTypeLabel = new System.Windows.Forms.Label();
+			this.splitTypeLabel = new LiveSplit.Sheepo.UI.SheepoLabel();
+			this.splitDetailsLabel = new LiveSplit.Sheepo.UI.SheepoLabel();
 			this.SuspendLayout();
 			// 
 			// addButton
@@ -79,17 +80,25 @@
 			// 
 			// splitTypeLabel
 			// 
-			this.splitTypeLabel.AutoSize = true;
 			this.splitTypeLabel.Location = new System.Drawing.Point(13, 39);
 			this.splitTypeLabel.Name = "splitTypeLabel";
-			this.splitTypeLabel.Size = new System.Drawing.Size(31, 13);
+			this.splitTypeLabel.Size = new System.Drawing.Size(76, 13);
 			this.splitTypeLabel.TabIndex = 4;
 			this.splitTypeLabel.Text = "Type";
+			// 
+			// splitDetailsLabel
+			// 
+			this.splitDetailsLabel.Location = new System.Drawing.Point(93, 39);
+			this.splitDetailsLabel.Name = "splitDetailsLabel";
+			this.splitDetailsLabel.Size = new System.Drawing.Size(321, 13);
+			this.splitDetailsLabel.TabIndex = 5;
+			this.splitDetailsLabel.Text = "Details";
 			// 
 			// SheepoSplitsControl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.splitDetailsLabel);
 			this.Controls.Add(this.splitTypeLabel);
 			this.Controls.Add(this.splitsPanel);
 			this.Controls.Add(this.splitCountLabel);
@@ -108,6 +117,7 @@
         private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Label splitCountLabel;
         private System.Windows.Forms.Panel splitsPanel;
-        private System.Windows.Forms.Label splitTypeLabel;
+        private SheepoLabel splitTypeLabel;
+        private SheepoLabel splitDetailsLabel;
     }
 }
